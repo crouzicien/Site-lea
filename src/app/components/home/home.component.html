@@ -1,0 +1,117 @@
+<div class="this">
+
+    <div class="logo">
+        <img src="assets/logo.png" alt="">
+    </div>
+
+    <!-- 
+                (mouseenter)="vignette.overIn($event, item)" 
+                (mouseleave)="vignette.overOut($event)"
+     -->
+    <ul class="snip1226">
+        <li *ngFor="let item of onglets.liste" (click)="onglets.click(item)"
+            [ngClass]="{current: item == onglets.current}">
+            <a [attr.data-hover]="item">{{item}}</a>
+        </li>
+        <li (click)="contact.go()" [ngClass]="{current: item == onglets.current}">
+            <a data-hover="Contact">Contact</a>
+        </li>
+    </ul>
+    <div class="seperateur"></div>
+
+    <div class="zone">
+        <ngx-masonry class="grid" [useImagesLoaded]="true">
+            <div ngxMasonryItem class="grid-item" *ngFor="let item of photos | filterBy: filtrePhotos"
+                (click)="vignette.zoomIn(item)" [ngClass]="{zoom: item.zoom, photoHorizontal: item.horizontal}"
+                (mouseenter)="vignette.overIn($event, item)" 
+                (mouseleave)="vignette.overOut($event)">
+                <img src="{{item.url}}" />
+                <div (click)="vignette.zoomIn(item)" class="vignette flipInY" *ngIf="item.showVignette">
+                    <div class="titre">Description</div>
+                    {{item.text}}
+                </div>
+            </div>
+        </ngx-masonry>
+    </div>
+    <div class="seperateur"></div>
+
+    <div class="zone">
+        <div class="couple fadeInLeft couple1">
+            <div class="partie-photo partie">
+                <img src="assets/after.png" alt="">
+                <img src="assets/illust.png" alt="">
+                <img src="assets/indesign.png" alt="">
+                <img src="assets/photoshop.png" alt="">
+                <!-- <img src="assets/sketch.png" alt=""> -->
+            </div>
+            <div class="partie-text partie">
+                <div class="titre"> Infographiste / Webdesigner</div>
+                <div class="ssTitre">Diplomée de l'école Aries Brassins</div>
+
+                <div class="liste">
+                    <b>Maitrise :</b>
+
+                    <div class="elm-liste">
+                        <div class="rond"></div>
+                        AfterEffect
+                    </div>
+                    <div class="elm-liste">
+                        <div class="rond"></div>
+                        Illustrator
+                    </div>
+                    <div class="elm-liste">
+                        <div class="rond"></div>
+                        InDesign
+                    </div>
+                    <div class="elm-liste">
+                        <div class="rond"></div>
+                        Photoshop
+                    </div>
+                    <div class="elm-liste">
+                        <div class="rond"></div>
+                        Html / Css - Dreamwaver - Bootstrap
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="couple fadeInRight couple2">
+            <div class="partie-text partie">
+                <div class="titre">Sanfilippo Léa</div>
+                <div class="ssTitre">Si vous etes interessez par mon travail, contactez-moi.</div>
+                <div class="listeContact">
+                    <div class="elm-liste">
+                        <i class="fa fa-phone"></i>
+                        06 50 25 29 06
+                    </div>
+                    <div class="elm-liste">
+                        <i class="fa fa-envelope"></i>
+                        Leasanf@gmail.com
+                    </div>
+                    <div class="elm-liste">
+                        <i class="fa fa-map-marker-alt"></i>
+                        Aix-en-Provence
+                    </div>
+                </div>
+
+                <div class="listeReseau">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-square"></i>
+                </div>
+
+
+            </div>
+            <div class="partie-photo partie">
+                <img class="img-portrait" src="assets/lea.png" alt="">
+                <a href="/assets/cv/Sanfilippo Léa - Curriculum Vitae.pdf" download>
+                    <div class="cv">
+                        <i class="fas fa-file-download"></i>
+                        <div class="label">Mon CV</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+</div>

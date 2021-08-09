@@ -1,0 +1,350 @@
+$jaune :rgb(255, 193, 24);
+$bleu :rgb(0, 140, 255);
+$width : 54vw;
+@import url('https://fonts.googleapis.com/css?family=Dosis|Nunito+Sans:300,300i,400|Quicksand&display=swap');
+
+
+.this {
+    font-size: 1vw;
+    transition-duration: 0.2s !important;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.05vw;
+}
+
+
+/* ---- LOGO ---- */
+
+.logo {
+    width: 15vw;
+    margin: 3vw auto;
+    position: relative;
+
+    img {
+        border-radius: 50%;
+        width: 100%;
+        // border:0.2vw solid $main;
+        box-shadow: 0 0 20px 5px rgb(129, 129, 129);
+    }
+
+    height: 15vw;
+}
+
+
+
+.zoom {
+    width: 60% !important;
+}
+
+.photoHorizontal {
+    width: 62.5% !important;
+}
+
+/* ---- GRID ---- */
+
+.zone {
+    width: $width;
+    margin: 0vw auto 0 auto;
+    box-sizing: border-box;
+
+    .grid {
+
+        // background: red;
+        .grid-item {
+            float: left;
+            // width: 32.3%;
+            width: 29.3%;
+            margin: 2%;
+
+            // box-shadow: 0 0 5px 1px rgb(37, 37, 37);
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            .vignette {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                font-size: 0.9vw;
+                color: white;
+                padding: 1.2vw;
+                animation-duration: 0.3s;
+                background: rgba(0, 0, 0, 0.8);
+                overflow: hidden;
+
+                .titre {
+                    width: 100%;
+                    text-align: left;
+                    padding-left: 1vw;
+                    font-size: 1vw;
+                    margin-bottom: 0.2vw;
+                    font-weight: 600;
+                    color: $jaune;
+                }
+            }
+
+        }
+
+    }
+
+    .couple {
+        width: 100%;
+        margin: 0vw 0;
+        position: relative;
+        // background: palegreen;
+        height: 20vw;
+        display: flex;
+        animation-duration: 0.5s;
+        justify-content: space-between;
+        ;
+        border-bottom: 1px solid rgb(63, 63, 63);
+        color: rgb(87, 87, 87);
+        transition: 0.3s;
+
+        .partie {
+            position: relative;
+            width: 50%;
+            height: 20vw;
+
+            img {
+                width: 4vw;
+            }
+        }
+
+        .partie-photo {
+            background: rgba(241, 241, 241, 0.014);
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: space-around;
+
+            .img-portrait {
+                width: 40%;
+                border-radius: 50%;
+            }
+
+            a {
+                position: absolute;
+                bottom: 1vw;
+                right: 2vw;
+                color: inherit;
+                text-decoration: inherit;
+
+
+                .cv {
+
+                    font-weight: 600;
+                    font-size: 1.2vw;
+                    text-align: center;
+
+                    .label {
+                        float: left;
+                    }
+
+                    .fas {
+                        float: left;
+                        margin-right: 0.5vw;
+                        font-size: 1.6vw;
+                    }
+
+                    cursor: pointer;
+                    transition: 0.1s;
+                }
+
+                .cv:hover {
+                    color: $jaune;
+                }
+            }
+        }
+
+        .partie-text {
+            // padding: 8vw 3vw;
+            padding: 2vw 1vw;
+            box-sizing: border-box;
+
+            // text-align: center;
+            .titre {
+                font-size: 1.6vw;
+                color: rgb(190, 190, 190);
+            }
+
+            .ssTitre {
+                font-weight: 500;
+                font-size: 1.1vw;
+                padding-left: 0.5vw;
+            }
+
+            .liste {
+                width: 90%;
+                position: relative;
+                left: 1vw;
+                top: 2vw;
+
+                .elm-liste {
+                    width: 100%;
+                    // background: red;
+                    height: 1.5vw;
+                    line-height: 1.5vw;
+
+                    // background: red;
+                    .rond {
+                        background: $jaune;
+                        height: 0.5vw;
+                        width: 0.5vw;
+                        position: relative;
+                        top: 0.4vw;
+                        border-radius: 50%;
+                        float: left;
+                        margin-right: 1vw;
+
+                    }
+
+
+                }
+            }
+
+            .listeContact {
+                width: 90%;
+                position: relative;
+                left: 1vw;
+                top: 2vw;
+
+                .elm-liste {
+                    width: 100%;
+                    // background: red;
+                    height: 1.5vw;
+                    line-height: 1.5vw;
+
+                    // background: red;
+                    .fa {
+                        font-size: 0.8vw;
+                        margin-right: 1vw;
+                        color: $bleu
+                    }
+
+
+                }
+            }
+
+            .listeReseau {
+                // background: white;
+                position: absolute;
+                right: 1vw;
+                bottom: 0.5vw;
+                font-size: 2vw;
+                cursor: pointer;
+
+                .fab {
+                    transition: 0.1s;
+                }
+
+                i {
+                    margin: 0 0.5vw;
+                }
+
+                .fa-facebook-square:hover {
+                    color: rgb(73, 88, 133);
+                }
+
+                .fa-instagram:hover {
+                    color: rgb(162, 112, 172);
+                }
+
+                .fa-pinterest-square:hover {
+                    color: rgb(116, 39, 39);
+                }
+            }
+
+        }
+    }
+
+    .couple1:hover {
+        color: rgb(146, 146, 146);
+        border-color: $jaune;
+        margin-left: 2vw;
+    }
+
+    .couple2:hover {
+        color: rgb(146, 146, 146);
+        border-color: $bleu;
+        margin-left: 2vw;
+    }
+}
+
+.seperateur {
+    position: relative;
+    width: 20%;
+    background: $jaune;
+    height: 1px;
+    margin: 3vw auto;
+
+}
+
+/* ------ LinkBar -------*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+.snip1226 {
+    font-family: 'Raleway', Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.snip1226 * {
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.snip1226 li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0 1.5em;
+    overflow: hidden;
+}
+
+.snip1226 a {
+    padding: 0.3em 0;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 0;
+    text-decoration: none;
+}
+
+.snip1226 a:before,
+.snip1226 a:after {
+    position: absolute;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.snip1226 a:before {
+    bottom: 100%;
+    display: block;
+    height: 3px;
+    width: 100%;
+    content: "";
+    background-color: $jaune;
+}
+
+
+.snip1226 a:after {
+    padding: 0.3em 0;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    content: attr(data-hover);
+    color: white;
+    white-space: nowrap;
+}
+
+.snip1226 li:hover a,
+.snip1226 .current a {
+    transform: translateY(100%);
+}
